@@ -99,12 +99,6 @@ systems. It implements both the IKEv1 and IKEv2 key exchange protocols.
 
 %install
 %make_install
-# Remove unwanted .la files
-find %{buildroot} -type f -name '*.la' -delete
-# Set correct permissions for config files
-chmod 644 %{buildroot}%{_sysconfdir}/strongswan.conf
-chmod 644 %{buildroot}%{_sysconfdir}/ipsec.conf
-chmod 600 %{buildroot}%{_sysconfdir}/ipsec.secrets
 
 %post
 %systemd_post strongswan.service
