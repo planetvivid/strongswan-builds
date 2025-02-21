@@ -54,7 +54,6 @@ systems. It implements both the IKEv1 and IKEv2 key exchange protocols.
 %autosetup -n %{name}-%{version}
 
 %build
-export CFLAGS="$CFLAGS -Wno-format-security"
 # Determine the appropriate host for cross-compilation
 %ifarch aarch64
 %global strongswan_host aarch64-redhat-linux
