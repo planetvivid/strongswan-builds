@@ -28,6 +28,7 @@ BuildRequires:  ldns-devel
 BuildRequires:  unbound-devel
 BuildRequires:  systemd
 BuildRequires:  openldap-devel
+BuildRequires: libgcrypt-devel
 # Added TPM2 development packages
 BuildRequires:  tpm2-tss-devel
 BuildRequires:  tpm2-tools
