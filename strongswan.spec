@@ -57,6 +57,7 @@ supports many popular cipher suites and cryptographic algorithms.
 %autosetup -n %{name}-%{version}
 
 %build
+export CFLAGS="$CFLAGS -Wno-format-security"
 # Configure with common options and security features
 %configure \
     --sysconfdir=%{_sysconfdir} \
