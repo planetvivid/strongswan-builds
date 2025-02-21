@@ -48,7 +48,8 @@ systems. It implements both the IKEv1 and IKEv2 key exchange protocols.
 
 # Disable the format-security error that conflicts with strongSwan's build
 %define _hardening_cflags %(echo '%{build_cflags}' | sed 's/-Werror=format-security//')
-%global build_cflags %{_hardening_cflags}
+%global build_cflags $RPM_BUILD_ROOT
+
 
 %prep
 %autosetup -n %{name}-%{version}
