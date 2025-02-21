@@ -8,7 +8,7 @@ Summary:        IPsec-based VPN Solution
 License:        GPL-2.0-or-later
 
 URL:            https://www.strongswan.org
-Source0:        https://download.strongswan.org/strongswan.tar.bz2
+Source0:        https://download.strongswan.org/%{name}-%{version}.tar.bz2
 
 # Build requirements for core functionality
 BuildRequires:  gcc
@@ -28,6 +28,9 @@ BuildRequires:  ldns-devel
 BuildRequires:  unbound-devel
 BuildRequires:  systemd
 BuildRequires:  openldap-devel
+# Added TPM2 development packages
+BuildRequires:  tpm2-tss-devel
+BuildRequires:  tpm2-tools
 
 # Runtime requirements
 Requires:       gmp
@@ -38,6 +41,8 @@ Requires:       libxml2
 Requires:       sqlite
 Requires:       ldns
 Requires:       unbound
+Requires:       tpm2-tss
+Requires:       tpm2-tools
 Requires(post): systemd
 Requires(preun): systemd
 Requires(postun): systemd
@@ -126,3 +131,4 @@ chmod 600 %{buildroot}%{_sysconfdir}/ipsec.secrets
 %changelog
 * Fri Feb 21 2025 Package Maintainer <maintainer@example.com> - 6.0.0-1
 - Initial package for strongSwan 6.0.0
+- Added TPM2 support with tpm2-tss-devel dependency
