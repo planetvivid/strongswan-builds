@@ -27,6 +27,7 @@ BuildRequires:  sqlite-devel
 BuildRequires:  ldns-devel
 BuildRequires:  unbound-devel
 BuildRequires:  systemd
+BuildRequires:  openldap-devel
 
 # Runtime requirements
 Requires:       gmp
