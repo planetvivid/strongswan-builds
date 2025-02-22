@@ -45,8 +45,8 @@ Summary:        IPsec-based VPN solution
 License:        GPL-2.0-or-later
 Group:          Productivity/Networking/Security
 URL:            https://www.strongswan.org/
-Source0:        http://download.strongswan.org/strongswan-%version.tar.bz2
-Source1:        http://download.strongswan.org/strongswan-%version.tar.bz2.sig
+Source0:        https://download.strongswan.org/strongswan-%version.tar.bz2
+Source1:        https://download.strongswan.org/strongswan-%version.tar.bz2.sig
 Source2:        %{name}.init.in
 Source3:        %{name}-rpmlintrc
 Source4:        README.SUSE
