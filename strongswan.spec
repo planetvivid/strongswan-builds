@@ -19,7 +19,7 @@ Summary:        An OpenSource IPsec-based VPN and TNC solution
 License:        GPL-2.0-or-later
 URL:            https://www.strongswan.org/
 VCS:            git:%{forgeurl0}
-Source0:        https://download.strongswan.org/%{name}-%{version}.tar.bz2
+Source0:        https://download.strongswan.org/strongswan.tar.bz2
 Source3:        tmpfiles-strongswan.conf
 
 BuildRequires:  autoconf
